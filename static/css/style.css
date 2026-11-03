@@ -9,10 +9,12 @@ body {
 .menu { padding: 0; }
 .menu li { display: inline-block; }
 .article-meta, .menu a {
+  cursor: pointer;
+  font-variant-caps: small-caps;
   text-decoration: none;
-  background: #eee;
-  padding: 5px;
-  border-radius: 5px;
+  /* background: #eee; */
+  padding: 0.7px 20px;
+  border: 1.2px dashed #bbb;
 }
 .menu, .article-meta, footer { text-align: center; }
 .title { font-size: 1.1em; }
@@ -21,6 +23,7 @@ hr {
   border-style: dashed;
   color: #ddd;
 }
+
 
 /* code */
 pre {
