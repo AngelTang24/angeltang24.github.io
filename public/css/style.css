@@ -1,29 +1,96 @@
 body {
-  max-width: 800px;
+  max-width: 700px;
   margin: auto;
-  padding: 1em;
+  padding: 0 1.5em;
+  font-size: 1.3em;
+  font-weight: 500;
   line-height: 1.5;
+  color: #1a1a1a;
+}
+
+.a {
+	cursor: pointer
+}
+
+/************/
+/* HEADINGS */
+/************/
+h1, h2, h3{
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+h1 {
+	font-variant-caps: small-caps;
+	font-size: 1.7em; 
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.7em;
+	font-style: italic; 
+	text-align: left;
 }
 
 /* header and footer areas */
-.menu { padding: 0; }
-.menu li { display: inline-block; }
-.article-meta, .menu a {
-  cursor: pointer;
+.menu { padding: 0.5em 0 0 0; }
+.menu li {
+	display: inline-block; 
+	margin: 0.8px 1px;
+}
+
+.main-menu {
+	position: sticky;
+	top: 0;
+	background: white;
+	z-index: 100;
+}
+
+.menu a {
   font-variant-caps: small-caps;
   text-decoration: none;
-  /* background: #eee; */
-  padding: 0.7px 20px;
-  border: 1.2px dashed #bbb;
+  padding: 0 20px;
+  border: 1px dotted #6b6b6b;
 }
-.menu, .article-meta, footer { text-align: center; }
+.menu, .footer {
+  text-align: center; 
+}
+
 .title { font-size: 1.1em; }
-footer a { text-decoration: none; }
+footer a {
+  text-decoration: none; 
+}
+
 hr {
   border-style: dashed;
   color: #ddd;
 }
+/* done with header and footer, commited (edit: padding changed to 0.2px for L/R) */
 
+h1 {
+	margin: 1em 0 auto auto;
+}
+
+.article-meta {
+	text-align: center;
+	color: #6b6b6b;
+	font-size: 0.8em;
+	font-weight: 400;
+	margin: 0;
+}
+
+.article-summary {
+	background: #efefeb;
+	border: 1px solid #ccc;
+	font-size: 0.8em; 
+	font-weight: 400;
+	padding: 0.8em 1em;
+	margin: 0.5em 0 2em 0;
+}
+
+/* .article-content > p:first-of-type::first-line {
+	text-transform: uppercase;
+} */
 
 /* code */
 pre {
