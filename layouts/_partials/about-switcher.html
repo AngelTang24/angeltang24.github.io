@@ -1,0 +1,6 @@
+{{ $current := . }}
+<nav class="switcher">
+    {{ range (site.GetPage "/about").Pages.ByWeight }}
+      <a href="{{ .RelPermalink }}"{{ if eq . $current }} class="active" aria-current="page"{{ end }}>{{ .Title }}</a>
+    {{ end }}
+</nav>
