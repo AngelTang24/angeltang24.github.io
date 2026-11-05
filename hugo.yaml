@@ -22,11 +22,15 @@ menu:
     - name: Blog
       url: "post/"
       weight: 3
-    - name: Tags
-      url: "tags/"
+    - name: My Wall
+      url: "note/"
       weight: 4
     - name: Subscribe
       url: "index.xml"
+
+# To test My Wall (with insufficient posts)
+#pagination:
+#  pagerSize: 1
 
 params:
   description: "A website built through Hugo and blogdown."

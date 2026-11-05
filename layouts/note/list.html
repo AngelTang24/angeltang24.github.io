@@ -1,0 +1,45 @@
+{{ partial "header.html" . }}
+{{ $paginator := .Paginate .RegularPages }}
+
+<section id="content" class="body">
+  {{ partial "page_nav.html" . }}
+
+  {{ range $paginator.Pages }}
+    <p>
+      <a href="{{ .RelPermalink }}" rel="bookmark">
+        #{{ .Slug | default .File.ContentBaseName }} —
+        <abbr class="published" title="{{ .Date.UTC.Format "2006-01-02T15:04:05Z" }}">
+          {{ .Date.Format "Jan 2, 2006" }}
+        </abbr>
+      </a>
+    </p>
+    {{ .Content }}
+    <hr />
+  {{ end }}
+
+  {{ partial "page_nav.html" . }}
+</section>
+
+{{ $urls := slice }}
+{{ range .RegularPages }}
+    {{ $urls = $urls | append .RelPermalink }}
+{{ end }}
+
+<script>
+    const pageURLs = {{ $urls | jsonify }};
+    document.querySelectorAll('.random-link').forEach(el => {
+        el.addEventListener('click', e => {
+            e.preventDefault();
+
+            if (pageURLs.length === 0) return;
+
+            const randomURL = pageURLs[
+                Math.floor(Math.random() * pageURLs.length)
+            ];
+
+            window.location.href = randomURL;
+        });
+    });
+</script>
+
+{{ partial "footer.html" . }}

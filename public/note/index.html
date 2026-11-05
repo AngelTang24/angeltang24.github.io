@@ -19,7 +19,7 @@
       
       <li><a href="/post/">Blog</a></li>
       
-      <li><a href="/tags/">Tags</a></li>
+      <li><a href="/note/">My Wall</a></li>
       
       <li><a href="/index.xml">Subscribe</a></li>
       
@@ -29,26 +29,75 @@
 
 
 
-<h1>Notes</h1>
-
-
-
-
-<ul>
+<section id="content" class="body">
   
-  
-   
-  <li>
+
     
-    <a href="/note/2017/06/14/another-note/">Another Note on A blogdown Tutorial</a>
-  </li>
-   
-  <li>
-    
-    <a href="/note/2017/06/13/a-quick-note/">A Quick Note on Two Beautiful Websites</a>
-  </li>
+
+
+
   
-</ul>
+    <p>
+      <a href="/note/2017/06/14/another-note/" rel="bookmark">
+        #another-note —
+        <abbr class="published" title="2017-06-14T00:00:00Z">
+          Jun 14, 2017
+        </abbr>
+      </a>
+    </p>
+    <p>I just discovered <a href="https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/">an awesome tutorial</a> on <strong>blogdown</strong> written by Alison. I have to admit this is <em>the</em> best <strong>blogdown</strong> tutorial I have seen so far.</p>
+<p><img src="https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/03-blogdown-2021.png" alt="Alison&rsquo;s blogdown tutorial"></p>
+
+    <hr />
+  
+    <p>
+      <a href="/note/2017/06/13/a-quick-note/" rel="bookmark">
+        #a-quick-note —
+        <abbr class="published" title="2017-06-13T00:00:00Z">
+          Jun 13, 2017
+        </abbr>
+      </a>
+    </p>
+    <p>To me, the two most impressive websites based on <strong>blogdown</strong> are:</p>
+<ol>
+<li><a href="https://robjhyndman.com">Rob J Hyndman</a>&rsquo;s personal website.</li>
+<li><a href="http://livefreeordichotomize.com">Live Free or Dichotomize</a> by Lucy and Nick <em>et al</em>.</li>
+</ol>
+<p>I&rsquo;m sure there will be more.</p>
+
+    <hr />
+  
+
+  
+
+    
+
+
+</section>
+
+
+
+    
+
+    
+
+
+<script>
+    const pageURLs = "[\"/note/2017/06/14/another-note/\",\"/note/2017/06/13/a-quick-note/\"]";
+    document.querySelectorAll('.random-link').forEach(el => {
+        el.addEventListener('click', e => {
+            e.preventDefault();
+
+            if (pageURLs.length === 0) return;
+
+            const randomURL = pageURLs[
+                Math.floor(Math.random() * pageURLs.length)
+            ];
+
+            window.location.href = randomURL;
+        });
+    });
+</script>
 
   <footer>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
@@ -65,4 +114,3 @@
   </footer>
   </body>
 </html>
-

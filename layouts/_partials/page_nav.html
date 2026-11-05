@@ -1,0 +1,32 @@
+
+{{ with .Paginator }}
+    {{ if gt .TotalPages 1 }}
+        <nav class="post-nav">
+            {{ with .Last }}
+                <a href="{{ .URL }}">|← oldest</a>
+            {{ else }}
+                <span class="nav-disabled">|← oldest</span>
+            {{ end }}
+
+            {{ with .Next }}
+                <a href="{{ .URL }}">← prev</a>
+            {{ else }}
+                <span class="nav-disabled">← prev</span>
+            {{ end }}
+
+            <a href="#" class="random-link">random</a>
+
+            {{ with .Prev }}
+                <a href="{{ .URL }}">next →</a>
+            {{ else }}
+                <span class="nav-disabled">next →</span>
+            {{ end }}
+
+            {{ with .First }}
+                <a href="{{ .URL }}">newest →|</a>
+            {{ else }}
+                <span class="nav-disabled">newest →|</span>
+            {{ end }}
+        </nav>
+    {{ end }}
+{{ end }}

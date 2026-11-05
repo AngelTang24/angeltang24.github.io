@@ -295,3 +295,22 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
 	margin-block-start: 0em;
 	margin-block-end: 0em;
 }
+
+/* page_nav.html for My Wall */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.9em;
+}
+
+.post-nav a,
+.post-nav span {
+  white-space: nowrap;
+}
+
+.nav-disabled {
+  opacity: 0.35;
+}
