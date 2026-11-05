@@ -2,9 +2,15 @@
 title: Home
 ---
 
-## _Status: I'm very free._
-
 I’m fortunate not to have to restrict myself to any interest/path yet. Anything of note is likely to pique my interest. To see what has, check out what I’m doing. Or say hi.
+
+## Why this?
+This is me learning how to deploy a static site completely from scratch. I have three blogging sites right now (under Substack, Blogger, and Bear)[^1], each with a slightly different purpose, so this one’s my final (and likely-to-fail) attempt to reconcile them all. Hopefully under a great-looking site too.
+
+I did mention I’m doing this from scratch, so thank you to the following sites I sought inspiration from: gwern.net, turntrout.com. The dedicated list is here.
+
+[^1]: If you’re interested, Blogger was meant for me to go unruly, Bear slightly less unruly and higher-quality, and Substack for quick takes (and one book review I was particularly proud of). This one will likely be a lot more well-maintained. 
+
 
 An example of the code section:
 

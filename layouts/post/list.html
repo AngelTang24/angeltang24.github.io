@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+{{if not .IsHome }}
+<h1>{{ .Title | markdownify }}</h1>
+{{ end }}
+
+{{ .Content }}
+<h2>Tags</h2>
+<ul class="tag-list">
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <li>
+      <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}/">#{{ $name }} <span>({{ $taxonomy.Count }})</span></a>
+    </li>
+  {{ end }}
+</ul>
+
+<h2>Everything</h2>
+<ul>
+  {{ $pages := .Pages }}
+  {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
+  {{ range (where $pages "Section" "!=" "") }} <!-- to exclude standalone files -->
+  <li>
+    <!-- <span class="date">{{ .Date.Format "2006/01/02" }}</span> -->
+    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+  </li>
+  {{ end }}
+</ul>
+
+{{ partial "footer.html" . }}
