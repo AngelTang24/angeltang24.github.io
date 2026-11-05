@@ -29,9 +29,26 @@
 
 
 <h1>About</h1>
-
 <p>I&rsquo;m a high school student who&rsquo;s still dipping her toes in the world out there. The things I write about aren&rsquo;t very specialised for that reason, but all the same I try to go about it with reason and logic.</p>
-<p>This site is meant to store everything from my musings to articles I put effort into writing. None of this will be seen until quite a few years later (or whenever I have the gall to share it), but there is something really nice seeing your work consolidated into a neat, pristine site.</p>
+
+
+
+
+<nav class="segmented" role="tablist">
+  
+    <button type="button" role="tab" data-target="panel-0"
+      class="active"
+      aria-selected="true">Site</button>
+  
+    <button type="button" role="tab" data-target="panel-1"
+      class=""
+      aria-selected="false">Me</button>
+  
+</nav>
+
+
+  <section id="panel-0" class="about-panel" role="tabpanel">
+    <p>This site is meant to store everything from my musings to articles I put effort into writing. None of this will be seen until quite a few years later (or whenever I have the gall to share it), but there is something really nice seeing your work consolidated into a neat, pristine site.</p>
 <blockquote>
 <p>Knowing your site will survive for decades to come gives you the mental wherewithal to tackle long-term tasks like gathering information for years, and such persistence can be useful if one holds onto every glimmer of genius for years, then even the dullest person may look a bit like a genius himself.</p>
 <p>&ndash; <a href="https://gwern.net/about#long-content">Gwern Branwen</a></p>
@@ -59,7 +76,25 @@
 <li>Get familiar with some mode of writing. If you like writing on a Moleskin go for it, if you prefer Google Docs great, if you (like me) function best when texting, sustain that for a while until you get familiar with writing then try out other modes of writing</li>
 <li>Write. There&rsquo;s nothing more to it</li>
 </ol>
-<h2 id="hugoyaml-the-config-file"><code>hugo.yaml</code> (the config file)</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>It started with making PPT slides, and when that proved boring I moved on to journalling, which I failed at because I couldn&rsquo;t keep it up for more than a week. This was when I realised for the process to satisfy me, there must a clear start and end, each piece of work a great journey to embark on, whereas journalling was supposed to be this daily/weekly commitment. So this is my next great project (or at least at the time it was written).&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Also why it took me so long to get around to making this. It never popped in my head that creating a site could be something deeply satisfying, because I&rsquo;d never seen a site that really hit all the right places. But when I did get inspired, I tried to figure exactly what it was that looked so nice, and replicate it here. To this day I have no idea if I vibe with minimalism or maximalism - I&rsquo;ve found examples of both I liked. Guess there just needs to be a lot of heart.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>I don&rsquo;t believe that craftmanship should have any ultimate purpose? Here purpose I mean pragmatic ones, like serving an audience or whatever. Of course you should have some idea or (if like me) inarticulable passion to why you&rsquo;re doing this, so that you can tailor your final product to such perfection. But yea, I don&rsquo;t see why this motivation should be pragmatic, though I guess it&rsquo;s pragmatic in the sense that it fulfills you, or it makes you happy. That&rsquo;s a pretty noble achievement.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+  </section>
+
+  <section id="panel-1" class="about-panel" role="tabpanel" hidden>
+    <h2 id="hugoyaml-the-config-file"><code>hugo.yaml</code> (the config file)</h2>
 <p>For this example site, I defined permalinks for two sections, <code>post</code> and <code>note</code>, so that the links to pages under these directories will contain the date info, e.g., <code>https://xmin.yihui.org/post/2016/02/14/a-plain-markdown-post/</code>. This is optional, and it is up to your personal taste of URLs.</p>
 <pre><code class="language-yaml">permalinks:
   note: &quot;/note/:year/:month/:day/:slug/&quot;
@@ -122,30 +157,23 @@
 </ul>
 <p>To fully understand these examples, you have to read <a href="https://bookdown.org/yihui/blogdown/templates.html">the section on Hugo templates</a> in the <strong>blogdown</strong> book.</p>
 <p>I hope you can enjoy this theme. The source code is <a href="https://github.com/yihui/hugo-xmin">on Github</a>. Happy hacking!</p>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>It started with making PPT slides, and when that proved boring I moved on to journalling, which I failed at because I couldn&rsquo;t keep it up for more than a week. This was when I realised for the process to satisfy me, there must a clear start and end, each piece of work a great journey to embark on, whereas journalling was supposed to be this daily/weekly commitment. So this is my next great project (or at least at the time it was written).&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
-<p>Also why it took me so long to get around to making this. It never popped in my head that creating a site could be something deeply satisfying, because I&rsquo;d never seen a site that really hit all the right places. But when I did get inspired, I tried to figure exactly what it was that looked so nice, and replicate it here. To this day I have no idea if I vibe with minimalism or maximalism - I&rsquo;ve found examples of both I liked. Guess there just needs to be a lot of heart.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3">
-<p>I don&rsquo;t believe that craftmanship should have any ultimate purpose? Here purpose I mean pragmatic ones, like serving an audience or whatever. Of course you should have some idea or (if like me) inarticulable passion to why you&rsquo;re doing this, so that you can tailor your final product to such perfection. But yea, I don&rsquo;t see why this motivation should be pragmatic, though I guess it&rsquo;s pragmatic in the sense that it fulfills you, or it makes you happy. That&rsquo;s a pretty noble achievement.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>
+
+  </section>
 
 
-
-<nav class="switcher">
-    
-      <a href="/about/site/">Site</a>
-    
-      <a href="/about/me/">Me</a>
-    
-</nav>
+<script>
+  const tabs = document.querySelectorAll('.segmented button');
+  const panels = document.querySelectorAll('.about-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      panels.forEach(p => p.hidden = true);
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      document.getElementById(tab.dataset.target).hidden = false;
+    });
+  });
+</script>
 
   <footer>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">

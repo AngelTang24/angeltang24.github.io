@@ -1,9 +1,36 @@
 {{ partial "header.html" . }}
 
-<h1>{{ .Title | markdownify }}</h1>
-
+<h1>{{ .Title }}</h1>
 {{ .Content }}
 
-{{ partial "about-switcher.html" . }}
+{{ $pages := .Pages.ByWeight }}
+
+<nav class="segmented" role="tablist">
+  {{ range $i, $p := $pages }}
+    <button type="button" role="tab" data-target="panel-{{ $i }}"
+      class="{{ if eq $i 0 }}active{{ end }}"
+      aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">{{ $p.Title }}</button>
+  {{ end }}
+</nav>
+
+{{ range $i, $p := $pages }}
+  <section id="panel-{{ $i }}" class="about-panel" role="tabpanel"{{ if ne $i 0 }} hidden{{ end }}>
+    {{ $p.Content }}
+  </section>
+{{ end }}
+
+<script>
+  const tabs = document.querySelectorAll('.segmented button');
+  const panels = document.querySelectorAll('.about-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      panels.forEach(p => p.hidden = true);
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      document.getElementById(tab.dataset.target).hidden = false;
+    });
+  });
+</script>
 
 {{ partial "footer.html" . }}

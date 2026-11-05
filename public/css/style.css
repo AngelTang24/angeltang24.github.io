@@ -224,27 +224,43 @@ table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
 
-.switcher {
-  display: inline-flex;
-  padding: 4px;
-  background: #efefef;
-  border-radius: 10px;
+
+
+.segmented {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.3em;
+  border-bottom: 1px dotted currentColor;
+  margin-left: 0;
 }
 
-.switcher a, .switcher a:hover {
-  background: none;
-  padding: 0.35em 1.5em;
-  border-radius: 7px;
-  color: #777;    
-  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
-}
-
-.switcher a:hover {
-  color: #1a1a1a;
-}
-
-.switcher a.active{
+.segmented button {
+  cursor: pointer;
+  font: inherit;
+  font-variant-caps: small-caps;
+  color: inherit;
   background: #fff;
-  color: #1a1a1a;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border: 1px dotted transparent;
+  border-bottom: 1px dotted #fff;
+  margin-bottom: -2px;
+  padding: 0.15em 1.5em;
+  opacity: 0.55;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.segmented button:hover {
+  text-decoration: underline dotted;
+  text-decoration-thickness: 0.8px;
+  text-underline-offset: 2.5px;
+}
+
+.segmented button.active {
+  opacity: 1;
+  border-color: currentColor;
+  border-bottom-color: #fff;   
+}
+
+.segmented button:focus-visible {
+  outline: 2px solid #3b3f8c;
+  outline-offset: 2px;
 }
