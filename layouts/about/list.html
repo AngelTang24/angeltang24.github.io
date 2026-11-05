@@ -15,6 +15,7 @@
 
 {{ range $i, $p := $pages }}
   <section id="panel-{{ $i }}" class="about-panel" role="tabpanel"{{ if ne $i 0 }} hidden{{ end }}>
+    {{ partial "toc.html" $p }}
     {{ $p.Content }}
   </section>
 {{ end }}

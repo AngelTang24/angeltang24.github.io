@@ -23,16 +23,17 @@
   {{ end }}
 </div>
 
-<h2>Everything</h2>
-<ul>
-  {{ $pages := .Pages }}
-  {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-  {{ range (where $pages "Section" "!=" "") }} <!-- to exclude standalone files -->
-  <li>
-    <!-- <span class="date">{{ .Date.Format "2006/01/02" }}</span> -->
-    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-  </li>
-  {{ end }}
-</ul>
+{{ $pages := where .Pages "Section" "!=" "" }}
+{{ range $pages.GroupByDate "2006" }}
+  <h2>{{ .Key }}</h2>
+  <ul>
+    {{ range .Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+        <span class="date">{{ .Date.Format "01/02" }}</span>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
 
 {{ partial "footer.html" . }}

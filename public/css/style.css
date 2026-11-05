@@ -7,6 +7,11 @@ body {
   line-height: 1.5;
   color: #1a1a1a;
 }
+
+html {
+  scroll-padding-top: 80px;
+}
+
 /*********/
 /* LINKS */
 /*********/
@@ -277,7 +282,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
 	background: #f9f9f9;
 	border: 1px solid #ccc;
 	padding: 0.8em 1em;
-	margin: 0.5em 0 2em 0;
+	margin: 1em 0 1em 0;
 }
 
 .toc-title, #TableOfContents a {

@@ -25,8 +25,9 @@ menu:
     - name: My Wall
       url: "note/"
       weight: 4
-    - name: Subscribe
-      url: "index.xml"
+    - name: Interests
+      url: "now/"
+      weight: 5
 
 # To test My Wall (with insufficient posts)
 #pagination:

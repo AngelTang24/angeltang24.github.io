@@ -5,7 +5,6 @@ build:
   render: never
   list: always
 ---
-
 This site is meant to store everything from my musings to articles I put effort into writing. None of this will be seen until quite a few years later (or whenever I have the gall to share it), but there is something really nice seeing your work consolidated into a neat, pristine site.
 
 > Knowing your site will survive for decades to come gives you the mental wherewithal to tackle long-term tasks like gathering information for years, and such persistence can be useful if one holds onto every glimmer of genius for years, then even the dullest person may look a bit like a genius himself.  
@@ -17,6 +16,9 @@ But that wasn't the only reason I set about creating this site. I've always had 
 It was also fitting that a nice site motivated me to _create_ more. I think it's similar for readers. A nice site motivates them to read more because if the author's put so much heart into creating one, you'd be more inclined to trust their work too. 
 
 Anyway, this is all just the origins of this site. You haven't really learnt about it yet. So here we go. 
+
+## Changelog
+Visit the [changelog](/changelog/) to see recent updates. My updates are quite sporadic, so this changelog might help instead of having to visit every page and check if I'd created anything. 
 
 ## The Content
 **Long form blog posts**, which are not necessarily all personal. I try to do a few informational ones here and there. Some can read like a diary. **Short form posts**. An accumulation of what I (would like to, but don't actually) jot down daily, likely to be a more personal. **Pictures** of my life (impersonal ones). **My recent interests**, where I'll update with my progress and also a few posts detailing what I've learnt. E.g., book reviews, math problems that caught my eye. As of right now (5 Nov 2026), I'm interested in _typing_, _debate_, _reading_, _writing_ and _math_. Only a few (e.g., typing) is likely to change in the far future. 

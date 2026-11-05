@@ -1,0 +1,6 @@
+{{ if and .Fragments.Headings (ne .Params.toc false) }}
+<div class="toc">
+  <div class="toc-title">Table of Contents</div>
+  {{ .TableOfContents }}
+</div>
+{{ end }}
