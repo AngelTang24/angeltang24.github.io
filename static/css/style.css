@@ -7,26 +7,50 @@ body {
   line-height: 1.5;
   color: #1a1a1a;
 }
-
+/*********/
+/* LINKS */
+/*********/
 /* I'm starting to think that maybe instead of an underline (which naturally draws attention), a slightly different colour for the link would be better */ 
+
 a { 
   cursor: pointer;
   /* text-decoration: underline;
   text-underline-offset: 2.5px; */
   text-decoration: none;
-  color: #7b341e;
+  color: #3b3f8c;
 }
-a::after {
-  content: "°";
+
+p a[href^="#"]::after, p a[href^="/"]::after  {
+  content: "⤴";
   opacity: 0.4;
+  margin-left: 0.1em;
 }
+
+p a[href^="http"]::after {
+  content: "↗";
+  opacity: 0.4;
+  margin-left: 0.1em;
+}
+
+/*
 a:hover {
   text-decoration: underline dotted;
   text-decoration-thickness: 0.8px;
   text-underline-offset: 2.5px;
 }
-a:hover::after {
+*/
+
+p a:hover::after {
   opacity: 1;
+}
+
+a {
+  text-decoration: none;
+  background: linear-gradient(#f7f7f7, #f7f7f7) no-repeat 0 90% / 100% 30%;
+  transition: background-size 0.2s;
+}
+a:hover {
+  background-size: 100% 100%;
 }
 
 /********/
@@ -46,15 +70,17 @@ a:hover::after {
   display: flex;
 }
 
+/* nice design, wonder if it should be implemented anywhere else, but for sake of clarity probably not - actually yes - see new implementation*/
+/*
 .tag-link a {
   text-decoration: none;
-  background: linear-gradient(#eee, #eee) no-repeat 0 90% / 100% 40%;
+  background: linear-gradient(#f7f7f7, #f7f7f7) no-repeat 0 90% / 100% 30%;
   transition: background-size 0.2s;
 }
 .tag-link a:hover {
   background-size: 100% 100%;
 }
-
+*/
 
 /************/
 /* HEADINGS */
@@ -99,6 +125,7 @@ h3 {
 }
 
 .menu a {
+  background: none;
   color: #1a1a1a;
   font-variant-caps: small-caps;
   text-decoration: none;
