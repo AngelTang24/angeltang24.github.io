@@ -6,6 +6,8 @@
 
 {{ .Content }}
 <h2>Tags</h2>
+
+<!-- I want to change it to a box instead of a list, having a list is abit useless
 <ul class="tag-list">
   {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
     <li>
@@ -13,6 +15,15 @@
     </li>
   {{ end }}
 </ul>
+-->
+
+<div class="tag-list">
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <span class="tag-link">
+      <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}/">#{{ $name }} <span>({{ $taxonomy.Count }})</span></a>
+    </span>
+  {{ end }}
+</div>
 
 <h2>Everything</h2>
 <ul>

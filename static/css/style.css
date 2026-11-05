@@ -8,9 +8,53 @@ body {
   color: #1a1a1a;
 }
 
-.a {
-	cursor: pointer
+/* I'm starting to think that maybe instead of an underline (which naturally draws attention), a slightly different colour for the link would be better */ 
+a { 
+  cursor: pointer;
+  /* text-decoration: underline;
+  text-underline-offset: 2.5px; */
+  text-decoration: none;
+  color: #7b341e;
 }
+a::after {
+  content: "°";
+  opacity: 0.4;
+}
+a:hover {
+  text-decoration: underline dotted;
+  text-decoration-thickness: 0.8px;
+  text-underline-offset: 2.5px;
+}
+a:hover::after {
+  opacity: 1;
+}
+
+/********/
+/* TAGS */
+/********/
+.tag-list {
+  border: 3px dotted #ccc;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 1rem;
+  padding: 0.5rem;
+  display: flex;
+}
+
+.tag-link {
+  align-items: center;
+  display: flex;
+}
+
+.tag-link a {
+  text-decoration: none;
+  background: linear-gradient(#eee, #eee) no-repeat 0 90% / 100% 40%;
+  transition: background-size 0.2s;
+}
+.tag-link a:hover {
+  background-size: 100% 100%;
+}
+
 
 /************/
 /* HEADINGS */
@@ -25,6 +69,7 @@ h1, h2, h3{
 h1 {
 	font-variant-caps: small-caps;
 	text-align: center;
+	margin: 1em 0 auto auto;
 	
 }
 
@@ -54,11 +99,17 @@ h3 {
 }
 
 .menu a {
+  color: #1a1a1a;
   font-variant-caps: small-caps;
   text-decoration: none;
   padding: 0 20px;
   border: 1px dotted #6b6b6b;
 }
+
+.menu a::after{
+  content: none;
+}
+
 .menu, .footer {
   text-align: center; 
 }
@@ -74,9 +125,6 @@ hr {
 }
 /* done with header and footer, commited (edit: padding changed to 0.2px for L/R) */
 
-h1 {
-	margin: 1em 0 auto auto;
-}
 
 .article-meta {
 	text-align: center;
