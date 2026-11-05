@@ -20,9 +20,9 @@ a {
   color: #3b3f8c;
 }
 
-p a[href^="#"]::after, p a[href^="/"]::after  {
+p a[href^="#"]:not(.footnote-ref):not(.footnote-backref)::after, p a[href^="/"]::after  {
   content: "⤴";
-  opacity: 0.4;
+  opacity: 0.5;
   margin-left: 0.1em;
 }
 
@@ -51,6 +51,20 @@ a {
 }
 a:hover {
   background-size: 100% 100%;
+}
+
+/* made the mistake of putting .footnote-ref a - which only applies if <a> is inside an element with class footnote-ref */
+
+a.footnote-ref, a.footnote-backref {
+  background: none;
+  opacity: 0.5;
+}
+
+a.footnote-backref:hover, a.footnote-ref:hover {
+  opacity: 1;
+  text-decoration: underline solid;
+  text-decoration-thickness: 0.8px;
+  text-underline-offset: 2.5px;
 }
 
 /********/
@@ -135,6 +149,12 @@ h3 {
 
 .menu a::after{
   content: none;
+}
+
+.menu a:hover {
+  text-decoration: underline dotted;
+  text-decoration-thickness: 0.8px;
+  text-underline-offset: 2.5px;
 }
 
 .menu, .footer {
