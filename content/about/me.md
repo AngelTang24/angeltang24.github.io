@@ -5,9 +5,7 @@ build:
   render: never
   list: always
 ---
-
-
-
+<!-- note that render: never means that they are not rendered as pages and thus do not have a url -->
 
 ## `hugo.yaml` (the config file)
 

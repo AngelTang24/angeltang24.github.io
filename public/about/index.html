@@ -94,7 +94,8 @@
   </section>
 
   <section id="panel-1" class="about-panel" role="tabpanel" hidden>
-    <h2 id="hugoyaml-the-config-file"><code>hugo.yaml</code> (the config file)</h2>
+    <!-- note that render: never means that they are not rendered as pages and thus do not have a url -->
+<h2 id="hugoyaml-the-config-file"><code>hugo.yaml</code> (the config file)</h2>
 <p>For this example site, I defined permalinks for two sections, <code>post</code> and <code>note</code>, so that the links to pages under these directories will contain the date info, e.g., <code>https://xmin.yihui.org/post/2016/02/14/a-plain-markdown-post/</code>. This is optional, and it is up to your personal taste of URLs.</p>
 <pre><code class="language-yaml">permalinks:
   note: &quot;/note/:year/:month/:day/:slug/&quot;

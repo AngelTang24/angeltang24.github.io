@@ -184,7 +184,7 @@ hr {
 }
 
 .article-summary {
-	background: #efefeb;
+	background: #f9f9f9;
 	border: 1px solid #ccc;
 	font-size: 0.8em; 
 	font-weight: 400;
@@ -224,8 +224,15 @@ table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
 
+/********/
+/* MISC */
+/********/
 
+/*********/
+/* ABOUT */
+/*********/
 
+/* switcher */
 .segmented {
   display: flex;
   gap: 0.5rem;
@@ -263,4 +270,28 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
 .segmented button:focus-visible {
   outline: 2px solid #3b3f8c;
   outline-offset: 2px;
+}
+
+/* toc */
+.toc {
+	background: #f9f9f9;
+	border: 1px solid #ccc;
+	padding: 0.8em 1em;
+	margin: 0.5em 0 2em 0;
+}
+
+.toc-title, #TableOfContents a {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	cursor: pointer;
+	list-style: none;
+	font-size: 0.8em; 
+	font-weight: 400;
+	background: none;
+}
+
+#TableOfContents ul {
+	margin-block-start: 0em;
+	margin-block-end: 0em;
 }

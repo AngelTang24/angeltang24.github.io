@@ -36,6 +36,10 @@ security:
   allowContent: ['.*']
 
 markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: false
   highlight:
     codeFences: false
   goldmark:
