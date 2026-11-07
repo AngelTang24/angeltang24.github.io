@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Reading on A minimal Hugo website</title>
+		<link>http://localhost:1313/now/reading/</link>
+		<description>Recent content in Reading on A minimal Hugo website</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/now/reading/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Review: The Lathe of Heaven</title>
+				<link>http://localhost:1313/now/reading/reviewtloh/</link>
+				<pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/now/reading/reviewtloh/</guid>
+				<description>&lt;p&gt;War rages and global warming wrecks havoc on the quality of life everywhere as seven billion people jostle for living space and food. For George Orr, a mild and unremarkable man, the world is overwhelmingly difficult. But George is different: his dreams can change reality – although he has no means of controlling this extraordinary power.&lt;/p&gt;&#xA;&lt;p&gt;Psychiatrist Dr William Haber offers to help, directing George to dream a world without racism. But as ambition gets the better of ethics, no one can predict the devastating consequences.&lt;/p&gt;&#xA;</description>
+			</item>
+			<item>
+				<title>Review: The Lathe of Heaven</title>
+				<link>http://localhost:1313/now/reading/reviewtloh/reviewtloh/</link>
+				<pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/now/reading/reviewtloh/reviewtloh/</guid>
+				<description>&lt;p&gt;War rages and global warming wrecks havoc on the quality of life everywhere as seven billion people jostle for living space and food. For George Orr, a mild and unremarkable man, the world is overwhelmingly difficult. But George is different: his dreams can change reality – although he has no means of controlling this extraordinary power.&lt;/p&gt;&#xA;&lt;p&gt;Psychiatrist Dr William Haber offers to help, directing George to dream a world without racism. But as ambition gets the better of ethics, no one can predict the devastating consequences.&lt;/p&gt;&#xA;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>A minimal Hugo website</title>
+		<title>Interests on A minimal Hugo website</title>
 		<link>http://localhost:1313/now/</link>
-		<description>Recent content on A minimal Hugo website</description>
+		<description>Recent content in Interests on A minimal Hugo website</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
 		
@@ -23,7 +23,7 @@
 				<link></link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid></guid>
-				<description></description>
+				<description>&lt;p&gt;Hello, this is reading.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Writing</title>
