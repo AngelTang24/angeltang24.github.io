@@ -2,7 +2,7 @@ body {
   max-width: 700px;
   margin: auto;
   padding: 0 1.5em;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 500;
   line-height: 1.5;
   color: #1a1a1a;
@@ -117,7 +117,7 @@ h1, h2, h3{
 }
 
 h1 {
-	font-size: 1.7em;
+	font-size: 1.8em;
 	font-variant-caps: small-caps;
 	text-align: center;
 	margin: 1em auto 0.3em auto;
@@ -125,14 +125,14 @@ h1 {
 }
 
 h2 {
-	font-size: 1.3em;
+	font-size: 1.5em;
 	text-align: left;
 	margin-left: 0;
 	border-bottom: 1px dotted currentColor;
 }
 
 h3 {
-	font-size: 1.3em;
+	font-size: 1.5em;
 	font-style: italic; 
 	text-align: left;
 }
@@ -141,7 +141,7 @@ h3 {
 .menu { padding: 0.5em 0 0 0; }
 .menu li {
 	display: inline-block; 
-	margin: 0.8px 1px;
+	margin: 0.8px 2px;
 }
 
 .main-menu {
@@ -156,7 +156,7 @@ h3 {
   color: #1a1a1a;
   font-variant-caps: small-caps;
   text-decoration: none;
-  padding: 0 20px;
+  padding: 2px 20px;
   border: 1px dotted #6b6b6b;
 }
 
@@ -201,7 +201,7 @@ hr {
 	font-size: 0.8em; 
 	font-weight: 400;
 	padding: 0.8em 1em;
-	margin: 0.5em 0 2em 0;
+	margin: 1.5em 0 2em 0;
 }
 
 /* .article-content > p:first-of-type::first-line {
