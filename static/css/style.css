@@ -8,6 +8,12 @@ body {
   color: #1a1a1a;
 }
 
+.note-p {
+  margin: auto 1em;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
 html {
   scroll-padding-top: 80px;
 }
@@ -169,6 +175,7 @@ h3 {
 }
 
 .title { font-size: 1.1em; }
+.note-title { font-size: 1.0em;}
 footer a {
   text-decoration: none; 
 }

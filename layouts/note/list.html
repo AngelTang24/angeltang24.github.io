@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-{{ $paginator := .Paginate .RegularPages }}
+{{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) }}
 
 <section id="content" class="body">
   {{ partial "page_nav.html" . }}
@@ -9,11 +9,13 @@
       <a href="{{ .RelPermalink }}" rel="bookmark">
         #{{ .Slug | default .File.ContentBaseName }} —
         <abbr class="published" title="{{ .Date.UTC.Format "2006-01-02T15:04:05Z" }}">
-          {{ .Date.Format "Jan 2, 2006" }}
+          <small>{{ .Date.Format "Jan 2, 2006" }}</small>
         </abbr>
       </a>
     </p>
-    {{ .Content }}
+    <div class="note-p">
+      {{ .Content }}
+    </div>  
     <hr />
   {{ end }}
 

@@ -1,6 +1,6 @@
-baseurl: "https://example.org/"  # please update this to your actual URL
+baseurl: https://AngelTang24.github.io/tyj34
 locale: "en-us"
-title: "A minimal Hugo website"
+title: "Tyj's dump"
 theme: ".."
 googleAnalytics: ""
 disqusShortname: ""
@@ -25,9 +25,6 @@ menu:
     - name: My Wall
       url: "note/"
       weight: 4
-    - name: Interests
-      url: "now/"
-      weight: 5
 
 # To test My Wall (with insufficient posts)
 #pagination:

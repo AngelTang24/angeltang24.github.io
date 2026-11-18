@@ -1,0 +1,21 @@
+
+{{ partial "header.html" . }}
+
+<main id="content" class="body">
+  <h1>{{ .Title }}</h1>
+
+  <ul>
+    {{ range .Pages.ByDate.Reverse }}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          {{ .LinkTitle }}
+        </a>
+        <small>({{ .Date.Format "Jan 2, 2006" }})</small>
+      </li>
+    {{ else }}
+      <li>No pages found.</li>
+    {{ end }}
+  </ul>
+</main>
+
+{{ partial "footer.html" . }}
