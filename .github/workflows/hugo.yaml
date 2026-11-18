@@ -1,0 +1,61 @@
+baseurl: https://AngelTang24.github.io/tyj34
+locale: "en-us"
+title: "Tyj's dump"
+theme: ".."
+googleAnalytics: ""
+disqusShortname: ""
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+footnotereturnlinkcontents: "↩"
+
+permalinks:
+  note: "/note/:year/:month/:day/:slug/"
+  post: "/post/:year/:month/:day/:slug/"
+
+menu:
+  main:
+    - name: Home
+      url: ""
+      weight: 1
+    - name: About
+      url: "about/"
+      weight: 2
+    - name: Blog
+      url: "post/"
+      weight: 3
+    - name: My Wall
+      url: "note/"
+      weight: 4
+
+# To test My Wall (with insufficient posts)
+#pagination:
+#  pagerSize: 1
+
+params:
+  description: "A website built through Hugo and blogdown."
+  footer: "The OG Penguin 2026"
+
+security:
+  allowContent: ['.*']
+
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: false
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
