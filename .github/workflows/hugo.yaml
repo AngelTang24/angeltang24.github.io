@@ -1,61 +1,61 @@
-baseurl: https://AngelTang24.github.io/tyj34
-locale: "en-us"
-title: "Tyj's dump"
-theme: ".."
-googleAnalytics: ""
-disqusShortname: ""
-ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
-footnotereturnlinkcontents: "↩"
+name: Deploy Hugo site to Pages
 
-permalinks:
-  note: "/note/:year/:month/:day/:slug/"
-  post: "/post/:year/:month/:day/:slug/"
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-menu:
-  main:
-    - name: Home
-      url: ""
-      weight: 1
-    - name: About
-      url: "about/"
-      weight: 2
-    - name: Blog
-      url: "post/"
-      weight: 3
-    - name: My Wall
-      url: "note/"
-      weight: 4
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-# To test My Wall (with insufficient posts)
-#pagination:
-#  pagerSize: 1
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
-params:
-  description: "A website built through Hugo and blogdown."
-  footer: "The OG Penguin 2026"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
 
-security:
-  allowContent: ['.*']
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.164.0'
+          extended: true
 
-markup:
-  tableOfContents:
-    startLevel: 2
-    endLevel: 3
-    ordered: false
-  highlight:
-    codeFences: false
-  goldmark:
-    renderer:
-      unsafe: true
-    extensions:
-      passthrough:
-        enable: true
-        delimiters:
-          block:
-          - - \[
-            - \]
-          - - $$
-            - $$
-          inline:
-          - - \(
-            - \)
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
