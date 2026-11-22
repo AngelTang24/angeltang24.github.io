@@ -159,7 +159,8 @@ h3 {
 }
 
 /* header and footer areas */
-.menu { padding: 0.5em 0 0 0; }
+.menu { padding: 1em 0; }
+ul.menu { margin: 0 0; }
 .menu li {
 	display: inline-block; 
 	margin: 0.8px 2px;
@@ -170,6 +171,7 @@ h3 {
 	top: 0;
 	background: white;
 	z-index: 100;
+	margin: 0;
 }
 
 .menu a {
@@ -195,11 +197,34 @@ h3 {
   text-align: center; 
 }
 
+@media (max-width: 600px) {
+	.menu ul,
+	ul.menu {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.5em;
+		margin: 0;
+		padding: 0.5em 0;
+		list-style: none;
+	}
+	.menu li {
+		display: block;
+		margin: 0;
+	}
+	.menu a {
+		display: block;
+		padding: 1px 0;
+		text-align: center;
+	}
+}
+
 .title { font-size: 1.1em; }
 .note-title { font-size: 1.0em;}
 footer a {
   text-decoration: none; 
 }
+
+.main-menu hr { margin: 0 0 2em calc(50% - 50vw); }
 
 hr {
   border-style: dashed;
