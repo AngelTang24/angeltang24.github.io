@@ -8,13 +8,29 @@
     <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
     {{ partial "head_custom.html" . }}
   </head>
-
+  
   <body>
-    <nav class="main-menu">
-    <ul class="menu">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-    <hr/>
-    </nav>
+  <div id="wrapper">
+	  <header id="layout-header">
+		  <div class="main-header-pic">
+			  <img src="{{ "images/penguin-landscape.png" | relURL }}" alt="penguin landscape">
+		  </div>
+		  
+		  <div class="main-header-text">
+			  <h1>The OG Penguin</h1>
+		  </div>
+	  </header>
+	  
+	  <aside id="layout-nav">
+		  <nav class="main-menu">
+			  <ul class="menu">
+				  {{ $currentPage := . }}
+				  {{ range .Site.Menus.main }}
+					{{ $isActive := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+					<li><a href="{{ .URL | relURL }}" class="nav-link{{ if $isActive }} active{{ end }}">{{ .Name }}</a></li>
+				  {{ end }}
+			  </ul>
+		  </nav>
+	  </aside>
+	  
+	  <article id="layout-content">

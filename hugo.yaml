@@ -22,7 +22,7 @@ menu:
     - name: Blog
       url: "post/"
       weight: 3
-    - name: My Wall
+    - name: Wall
       url: "note/"
       weight: 4
 

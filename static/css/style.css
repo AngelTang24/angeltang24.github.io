@@ -1,5 +1,5 @@
 body {
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
   padding: 0 1.5em;
   font-size: 1.1em;
@@ -18,11 +18,6 @@ html {
   overflow-x: clip; 
 }
 
-.main-menu hr,
-footer hr {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-}
 
 /*********/
 /* LINKS */
@@ -159,19 +154,38 @@ h3 {
 }
 
 /* header and footer areas */
-.menu { padding: 1em 0; }
-ul.menu { margin: 0 0; }
-.menu li {
-	display: inline-block; 
-	margin: 0.8px 2px;
+/* i have main-menu and main-header-pic*/
+
+.flex-child, .grid-item {
+  min-width: 0;
 }
+
+#wrapper {
+	display: grid;
+	grid-template-columns: 8em minmax(0, 1fr);
+	column-gap: 1em;
+	max-width: 45em;
+	margin: 0 auto;
+	align-items: start;
+}
+
+#layout-nav { position: sticky; top: 20px; }
 
 .main-menu {
 	position: sticky;
 	top: 0;
 	background: white;
-	z-index: 100;
 	margin: 0;
+	padding: 1em 0;
+}
+
+ul.menu {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .menu a {
@@ -180,58 +194,74 @@ ul.menu { margin: 0 0; }
   font-variant-caps: small-caps;
   text-decoration: none;
   padding: 2px 20px;
-  border: 1px dotted #6b6b6b;
+  border-bottom: 1px dotted #6b6b6b;
 }
 
 .menu a::after{
   content: none;
 }
 
-.menu a:hover {
-  text-decoration: underline dotted;
-  text-decoration-thickness: 0.8px;
-  text-underline-offset: 2.5px;
+.menu a:hover { background-color: #6b6b6b; color: #e5e5e5; }
+
+/* main-header */
+
+#layout-header {
+	grid-column: 1 / -1;
+	display: flex;
+	align-items: center;
+	gap: 1.5em;
+	border-bottom: 1px dotted #6b6b6b;
+	padding: 0.5em 0 0.5em 0;
+	margin-bottom: 2em;
 }
 
-.menu, .footer {
-  text-align: center; 
+.main-header-pic { 
+	background: white; 
+	flex: 0 0 60%;
+	min-width: 0;
 }
 
-@media (max-width: 600px) {
-	.menu ul,
+.main-header-pic img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+.main-header-text { flex: 1; min-width: 0; }
+.main-header-text h1 { text-align: right; margin: 0.3em 0; }
+
+/* @media (max-width: 741.33px) {
+	.main-header-pic { flex: 0 0 75%; }
+} */
+
+@media screen and (max-width: 55em) {
+	#wrapper {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	#layout-nav {
+		position: sticky; 
+		top: 0;
+		z-index: 100;
+		align-self: start;
+		background: white;
+		margin-bottom: 0;
+	}
 	ul.menu {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 0.5em;
-		margin: 0;
-		padding: 0.5em 0;
-		list-style: none;
+		flex-direction: row;
+		flex-wrap: wrap; 
+		justify-content: space-between;
+		gap: 0 0.5em;
 	}
-	.menu li {
-		display: block;
-		margin: 0;
-	}
-	.menu a {
-		display: block;
-		padding: 1px 0;
-		text-align: center;
-	}
+	#layout-header { display: block; margin-bottom: 0.5em; }
+	.main-header-text h1 { text-align: left; }
 }
+
+
+/* end of trial */
 
 .title { font-size: 1.1em; }
 .note-title { font-size: 1.0em;}
-footer a {
-  text-decoration: none; 
-}
-
-.main-menu hr { margin: 0 0 2em calc(50% - 50vw); }
-
-hr {
-  border-style: dashed;
-  color: #ddd;
-}
-/* done with header and footer, commited (edit: padding changed to 0.2px for L/R) */
-
 
 .article-meta {
 	text-align: center;
@@ -371,4 +401,14 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
 
 .nav-disabled {
   opacity: 0.35;
+}
+
+.hide-scrollbar {
+  overflow: auto; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; 
 }
