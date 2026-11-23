@@ -27,8 +27,9 @@ menu:
       weight: 4
 
 # To test My Wall (with insufficient posts)
-#pagination:
-#  pagerSize: 1
+# I like this nevermind - won't comment out
+pagination:
+  pagerSize: 1
 
 params:
   description: "A website built through Hugo and blogdown."
