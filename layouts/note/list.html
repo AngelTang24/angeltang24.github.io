@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-{{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) }}
+{{ $paginator := .Paginate (.RegularPages.ByTitle.Reverse) }}
 
 <section id="content" class="body">
   {{ partial "page_nav.html" . }}

@@ -8,7 +8,7 @@ ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 footnotereturnlinkcontents: "↩"
 
 permalinks:
-  note: "/note/:year/:month/:day/:slug/"
+  note: "/note/:year/:month/:slug/"
   post: "/post/:year/:month/:day/:slug/"
 
 menu:
@@ -29,10 +29,10 @@ menu:
 # To test My Wall (with insufficient posts)
 # I like this nevermind - won't comment out
 pagination:
-  pagerSize: 1
+  pagerSize: 10
 
 params:
-  description: "A website built through Hugo and blogdown."
+  description: "A website built through Hugo."
   footer: "The OG Penguin 2026"
 
 security:
