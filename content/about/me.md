@@ -5,81 +5,68 @@ build:
   render: never
   list: always
 ---
-<!-- note that render: never means that they are not rendered as pages and thus do not have a url -->
 
-## `hugo.yaml` (the config file)
+## Say hi
+The best (and only) way to reach me is by email: tangyjangel@gmail.com. I’ve deleted most social media, as my feed usually turns to shit after sometime. Please do email me, on the off chance anyone even sees this page. 
 
-For this example site, I defined permalinks for two sections, `post` and `note`, so that the links to pages under these directories will contain the date info, e.g., `https://xmin.yihui.org/post/2016/02/14/a-plain-markdown-post/`. This is optional, and it is up to your personal taste of URLs.
+## Now
 
-```yaml
-permalinks:
-  note: "/note/:year/:month/:day/:slug/"
-  post: "/post/:year/:month/:day/:slug/"
-```
+> A /now page shares what you'd tell a friend you hadn't seen in a year. 
+>  
+> -- https://nownownow.com/about
 
-You can define the menu through `menu.main`, e.g.,
+Last updated Nov 2026. 
 
-```yaml
-menu:
-  main:
-    - name: Home
-      url: ""
-      weight: 1
-    - name: About
-      url: "about/"
-      weight: 2
-    - name: Categories
-      url: "categories/"
-      weight: 3
-    - name: Tags
-      url: "tags/"
-      weight: 4
-    - name: Subscribe
-      url: "index.xml"
-```
+### Job
+Still stuck in school. It's a nice experience, though. Right now it's the Dec holidays. 
 
-Alternatively, you can add `menu: main` to the YAML metadata of any of your pages, so that these pages will appear in the menu.
+### Sidequests
+**Typing**: In 2024, my wpm was a mediocre 80-90. In 2026, my friend told me she'd reached 150 wpm, which of course startled me. (Nevermind the fact that she'd been retaking one test all that time.) So I started practising on [keybr.com](https://www.keybr.com), [monkeytype.com](https://monkeytype.com/), [typersworld.com](https://www.typersworld.com), [keymash.io](https://keymash.io), [10fastfingers.com](https://10fastfingers.com). I use a different combination of sites everytime I practise, mostly for novelty's sake. [typingmentor.com](https://typingmentor.com) is a good one if you want to practise your left/right hand only. 
 
-The page footer can be defined in `.Params.footer`, and the text is treated as Markdown, e.g.,
+In Sept/Oct 2026, I was consistently reaching 90-100 wpm with 6 fingers. In Oct/Nov 2026, I grew accustomed to using 8 fingers, and reached what I thought to be a startling 120 wpm. At that time I'd believed that this was sufficient for me, as the 10 finger layout felt cramped. Still 120 wpm seemed to be the ceiling for 8 fingers, so I reluctantly tried a 10 finger layout. 
 
-```
-params:
-  footer: "&copy; [Yihui Xie](https://yihui.org) 2017 -- {Year}"
-```
+It worked out ok. It wasn't that big a shift, 8 fingers to 10. I didn't have a problem with touch typing (I never looked down at the keyboard to begin with), it was mostly getting used to squeezing 10 fingers into the keyboard. But here I am and it feels quite good. 
 
-Here `{Year}` means the year in which the site is built (usually the current year).
+Now, my highest is 141 wpm on Monkeytype's quote medium english. 128 wpm for a 1 min test is above average for me. I average 120 wpm when I'm not tired. I still have to work on getting my accuracy up, especially for quote tests which I always fumble. My accuracy is on average 95-97%, when I'm tired it can drop to 93-95%. (Or when I'm especially careless.)
 
-## Custom layouts
+**Making this site**: I put quite a bit of time into this one, though a lot of it was haphazardly put together. I don't know which came first, the motivation to write or the motivation to create a site. To this day I haven't really met a site that blew my mind away, though [turntrout.com](https://turntrout.com) came pretty close. 
 
-There are two layout files under `layouts/_partials/` that you may want to override: `head_custom.html` and `foot_custom.html`. This is how you inject arbitrary HTML code to the head and foot areas. For example, this site has a file `layouts/_partials/foot_custom.html` to support LaTeX math via KaTeX and center images automatically:
+**Math**: More specifically olympiad combinatorics. I've done the basic Principles and Techniques, Monovariants and Invariants, and I'll probably start work on the Pigeonhole Principle tomorrow. 
 
-```html
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
-<script src="//cdn.jsdelivr.net/combine/npm/katex/dist/katex.min.js,npm/katex/dist/contrib/auto-render.min.js,npm/@xiee/utils/js/render-katex.js" defer></script>
+I'm looking to pre-learn next year's school (core) content as well, but this isn't really high a priority as learning higher math isn't that appealing anymore. 
 
-<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
-```
+(Also math probably is more of a main quest, as I'm quite invested in it. But I suppose anything that falls outside my job scope as a student is a side quest.)
 
-You can certainly enable highlight.js for syntax highlighting by yourself through `head_custom.html` and `foot_custom.html` if you want.
+### Recent milestones
+- I finished a year of school.
+- My birthday was recent! I got wishes from 3 close friends. 
 
-If you do not like the default fonts (e.g., `Palatino`), you may provide your own `static/css/fonts.css` under the root directory of your website to override the `fonts.css` in the theme.
+(This is looking a bit sad. I'll get rid of this section soon.)
 
-## Other features
+## What I'm consuming
+### Favourite articles/posts 
+- [all's unfair in love by john d. zhang](https://ordinaryinstants.substack.com/p/alls-unfair-in-love) 
+- [My Heart of Hearts by Scott Alexander](https://www.astralcodexten.com/p/my-heart-of-hearts)
+> But at the end of considering them, I should treat whatever answer I get not as an alternative to doing something about my grief at the few stories that really catch my attention, but as an apotheosis of that grief - a stronger, more rigorous version of that grief, better by its own values and more capable of achieving its own goals.
+- [Feminism Needs to Acknowledge The Social Meaning of Sex](https://defendingfeminism.substack.com/p/feminism-needs-to-acknowledge-the)
 
-I could have added more features to this theme, but I decided not to, since I have no intention to make this theme feature-rich. However, I will teach you how. I have prepared several examples via pull requests at https://github.com/yihui/hugo-xmin/pulls, so that you can see the implementations of these features when you check out the diffs in the pull requests. For example, you can:
+### Favourite quick takes
+- [https://substack.com/@coreyrobin/note/c-341071548](https://substack.com/@coreyrobin/note/c-341071548)
+> How do you, in good faith, teach someone whose good faith you cannot assume? It seems to me that the only way this statement of this professor could be true is if we assume teaching is not an intersubjective or dialogical activity, that the teacher can be utterly sealed off from what students do, not just from this particular student and what this student does but from all students.
+- [https://substack.com/@samkriss/note/c-283024706](https://substack.com/@samkriss/note/c-283024706)
+> as i keep pointing out, ai writing is actually incredibly unusual: it’s not bland, it’s not just an average of the training data, it follows very different rules to human writing and if anything the gap between the two is growing. if you think that ai writing is necessarily worse than human writing—which it is—you should accept that ai writing is distinctive, not in some wishwashy sense of lacking “soul” or whatever but distinctive in a way that can be measured statistically. 
 
-- [Enable Google Analytics](https://github.com/yihui/hugo-xmin/pull/3)
+### Recent songs
+- Always Been by JEW
+- Kill by JEW
+- Polaris by JEW
+- 23 by JEW
+- Dizzy by JEW
+- Traitor by Olivia Rodrigo
+- The Funeral by Band of Horses
 
-- [Enable Disqus comments](https://github.com/yihui/hugo-xmin/pull/4)
+### Misc
+[![War and Peas comic](/images/war-and-peas-comic.webp)](https://substack.com/@warandpeas/note/c-351408713)
 
-- [Enable highlight.js for syntax highlighting of code blocks](https://github.com/yihui/hugo-xmin/pull/5)
 
-- [Display categories and tags on a page](https://github.com/yihui/hugo-xmin/pull/2)
 
-- [Add a table of contents](https://github.com/yihui/hugo-xmin/pull/7)
-
-- [Add a link in the footer of each page to "Edit this page" on Github](https://github.com/yihui/hugo-xmin/pull/6)
-
-To fully understand these examples, you have to read [the section on Hugo templates](https://bookdown.org/yihui/blogdown/templates.html) in the **blogdown** book.
-
-I hope you can enjoy this theme. The source code is [on Github](https://github.com/yihui/hugo-xmin). Happy hacking!
