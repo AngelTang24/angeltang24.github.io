@@ -2,7 +2,7 @@
 title: Home
 ---
 
-I’m fortunate not to have to restrict myself to any interest/path yet. Anything of note is likely to pique my interest. To see what has, check out what I’m doing. Or say hi.
+I’m fortunate not to have to restrict myself to any interest/path yet. Anything of note is likely to [pique my interest](https://angeltang24.github.io/). To see what has, check out [what I’m doing](https://angeltang24.github.io/). Or [say hi](https://angeltang24.github.io/).
 
 ## Why this?
 This is me learning how to deploy a static site completely from scratch. I have three blogging sites right now (under Substack, Blogger, and Bear)[^1], each with a slightly different purpose, so this one’s my final (and likely-to-fail) attempt to reconcile them all. Hopefully under a great-looking site too.

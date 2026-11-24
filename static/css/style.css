@@ -1,10 +1,19 @@
+:root {
+	--charcoal-blue: #2e3c4f;
+	--ash-grey-light: #EDF1EF; /*  for layout-content */
+	--ash-grey: #a3bbad;
+	--vibrant-coral: #c94a3a; /*  link hover, footnote markers */
+	--vibrant-coral-light: #A74539;
+	--sunflower-gold: #f7b32b; /*  if for some reason necessary */
+}
+
 body {
   max-width: 850px;
   margin: auto;
   font-size: 1.15em;
   font-weight: 400;
   line-height: 1.2;
-  color: #1a1a1a;
+  color: var(--charcoal-blue);
 }
 
 .note-p {
@@ -23,23 +32,30 @@ html {
 /*********/
 /* I'm starting to think that maybe instead of an underline (which naturally draws attention), a slightly different colour for the link would be better */ 
 
-a { 
-  cursor: pointer;
-  /* text-decoration: underline;
-  text-underline-offset: 2.5px; */
-  text-decoration: none;
-  color: #3b3f8c;
+a {
+	cursor: pointer;
+	text-decoration: underline;
+	color: var(--vibrant-coral-light);
+	text-decoration-color: var(--vibrant-coral-light);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+	transition: color 0.3s cubic-bezier(.4, 0, .2, 1), text-decoration-color 0.3s cubic-bezier(.4, 0, .2, 1), text-decoration-thickness 0.3s cubic-bezier(.4, 0, .2, 1), text-underline-offset 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+a:hover {
+	color: var(--vibrant-coral);
+	text-decoration-color: var(--vibrant-coral);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 5px;
 }
 
 p a[href^="#"]:not(.footnote-ref):not(.footnote-backref)::after, p a[href^="/"]::after  {
   content: "⤴";
-  opacity: 0.5;
   margin-left: 0.1em;
 }
 
 p a[href^="http"]::after {
   content: "↗";
-  opacity: 0.4;
   margin-left: 0.1em;
 }
 
@@ -55,6 +71,7 @@ p a:hover::after {
   opacity: 1;
 }
 
+/*
 a {
   overflow-wrap: break-word;
   text-decoration: none;
@@ -64,20 +81,20 @@ a {
 a:hover {
   background-size: 100% 100%;
 }
+*/
 
 /* made the mistake of putting .footnote-ref a - which only applies if <a> is inside an element with class footnote-ref */
-
+/*
 a.footnote-ref, a.footnote-backref {
   background: none;
-  opacity: 0.5;
 }
 
 a.footnote-backref:hover, a.footnote-ref:hover {
-  opacity: 1;
   text-decoration: underline solid;
   text-decoration-thickness: 0.8px;
   text-underline-offset: 2.5px;
 }
+
 
 @media (hover: none) {
 	a {
@@ -92,6 +109,8 @@ a.footnote-backref:hover, a.footnote-ref:hover {
 		text-decoration: none;
 	}
 }
+
+*/
 
 /********/
 /* TAGS */
@@ -190,19 +209,17 @@ ul.menu {
 }
 
 .menu a {
-  background: none;
-  color: #1a1a1a;
+  color: var(--charcoal-blue);
+  text-decoration-color: var(--charcoal-blue);
   font-variant-caps: small-caps;
-  text-decoration: none;
   padding: 2px 20px;
-  border-bottom: 1px dotted #6b6b6b;
 }
 
 .menu a::after{
   content: none;
 }
 
-.menu a:hover { background-color: #6b6b6b; color: #e5e5e5; }
+/* .menu a:hover { background-color: #6b6b6b; color: #e5e5e5; }  -- i wanna do something cooler for hover*/ 
 
 /* main-header */
 
@@ -236,7 +253,7 @@ ul.menu {
 	.main-header-pic { flex: 0 0 75%; }
 } */
 
-#layout-content { border-radius: 1em; padding: 0 1.5em 1em 1.5em; background-color: #eff2f6; }
+#layout-content { border-radius: 1em; padding: 0 1.5em 1em 1.5em; background-color: var(--ash-grey-light); }
 
 @media screen and (max-width: 55em) {
 	#wrapper {
@@ -294,12 +311,13 @@ footer {
 
 /* code */
 pre {
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #eee;
+  border: 1px solid #888;
+  box-shadow: 5px 5px 5px #AAA;
   padding: 1em;
   overflow-x: auto;
+  background-color: #c8d6ce;
 }
-code { background: #f9f9f9; }
+code { background: var(--ash-grey); }
 pre code { background: none; }
 
 /* misc elements */
@@ -414,9 +432,12 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
 sup { vertical-align: top; font-size: 0.7em; }
 
 .katex-display {
+  background-color: #FDF0D5;
+  border: 1px solid #888;
+  box-shadow: 5px 5px 5px #AAA;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 0.5em 0; /* Prevents vertical scrollbars from clipping tall symbols */
+  padding: 1em;
 }
 
 .hide-scrollbar {
