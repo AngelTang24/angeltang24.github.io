@@ -1,10 +1,9 @@
 body {
-  max-width: 800px;
+  max-width: 850px;
   margin: auto;
-  padding: 0 1.5em;
-  font-size: 1.1em;
-  font-weight: 500;
-  line-height: 1.5;
+  font-size: 1.15em;
+  font-weight: 400;
+  line-height: 1.2;
   color: #1a1a1a;
 }
 
@@ -127,13 +126,14 @@ a.footnote-backref:hover, a.footnote-ref:hover {
 /* HEADINGS */
 /************/
 h1, h2, h3{
-	font-weight: 500;
+	font-weight: 700;
+	font-style: bold;
 	line-height: 1.2;
 	margin-block-end: 0.83em;
 }
 
 h1 {
-	font-size: 1.8em;
+	font-size: 2.0em;
 	font-variant-caps: small-caps;
 	text-align: center;
 	margin: 1em auto 0.3em auto;
@@ -163,9 +163,10 @@ h3 {
 #wrapper {
 	display: grid;
 	grid-template-columns: 8em minmax(0, 1fr);
-	column-gap: 1em;
-	max-width: 45em;
+	column-gap: 0em;
+	max-width: 55em;
 	margin: 0 auto;
+	padding: 0 1em;
 	align-items: start;
 }
 
@@ -235,6 +236,8 @@ ul.menu {
 	.main-header-pic { flex: 0 0 75%; }
 } */
 
+#layout-content { border-radius: 1em; padding: 0 1.5em 1em 1.5em; background-color: #eff2f6; }
+
 @media screen and (max-width: 55em) {
 	#wrapper {
 		grid-template-columns: minmax(0, 1fr);
@@ -259,6 +262,11 @@ ul.menu {
 
 
 /* end of trial */
+
+footer {
+	margin: 0.5em 0;
+	font-size: 1.0em; 
+}
 
 .title { font-size: 1.1em; }
 .note-title { font-size: 1.0em;}
@@ -401,6 +409,14 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
 
 .nav-disabled {
   opacity: 0.35;
+}
+
+sup { vertical-align: top; font-size: 0.7em; }
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5em 0; /* Prevents vertical scrollbars from clipping tall symbols */
 }
 
 .hide-scrollbar {
