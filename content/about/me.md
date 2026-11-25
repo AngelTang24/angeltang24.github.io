@@ -2,7 +2,6 @@
 title: Me
 weight: 2
 build:
-  render: never
   list: always
 ---
 

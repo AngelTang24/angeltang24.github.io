@@ -1,5 +1,5 @@
 :root {
-	--charcoal-blue: #2e3c4f;
+	--charcoal-blue: #2e3c4f;  
 	--ash-grey-light: #EDF1EF; /*  for layout-content */
 	--ash-grey: #a3bbad;
 	--vibrant-coral: #c94a3a; /*  link hover, footnote markers */
@@ -67,10 +67,6 @@ a:hover {
   text-underline-offset: 2.5px;
 }
 */
-
-p a:hover::after {
-  opacity: 1;
-}
 
 /*
 a {
@@ -322,7 +318,8 @@ code { background: var(--light-gray); }
 pre code { background: none; }
 
 /* misc elements */
-img, iframe, video { max-width: 100%; }
+img, iframe, video { max-width: 100%; box-sizing: border-box; }
+img { padding: 1em 1em; width: auto; }
 main { hyphens: auto; }
 blockquote {
   background: var(--light-gray);

@@ -4,7 +4,7 @@ date: 2026-11-02
 categories:
   - Reading
 tags:
-  - bookreview
+  - book-review
 summary: 'War rages and global warming wrecks havoc on the quality of life everywhere as seven billion people jostle for living space and food. For George Orr, a mild and unremarkable man, the world is overwhelmingly difficult. But George is different: his dreams can change reality –- although he has no means of controlling this extraordinary power. Psychiatrist Dr William Haber offers to help, directing George to dream a world without racism. But as ambition gets the better of ethics, no one can predict the devastating consequences.'
 ---
 

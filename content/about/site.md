@@ -2,7 +2,6 @@
 title: Site
 weight: 1
 build:
-  render: never
   list: always
 ---
 This site is meant to store everything from my musings to articles I put effort into writing. None of this will be seen until quite a few years later (or whenever I have the gall to share it), but there is something really nice seeing your work consolidated into a neat, pristine site.
@@ -17,15 +16,18 @@ It was also fitting that a nice site motivated me to create more. I think it's s
 
 So here we go. 
 
-## Changelog
+## Meta
 Visit the [changelog](/changelog/) to see recent updates. My updates are quite sporadic, so this changelog might help instead of having to visit every page and check if I'd created anything. 
+
+You can also read about the [design of this site](/design/). This is still WIP, as I haven't been that meticulous about it. 
+
+More meta stuff should be available [here](/categories/meta/).
 
 ## The Content
 [**Long form blog posts**](/post/), which are not necessarily all personal. I try to do a few informational ones here and there. Some can read like a diary. [**Short form posts**](/note/). An accumulation of what I (would like to, but don't actually) jot down daily, likely more personal. 
 
 I write about [**books I've read**](/categories/reading/), [**debate**](/categories/debate), [**ultimate**](/categories/ulti/). I'll also update on passing interests (at this time of writing, I'm planning a post on typing). [**Math**](/categories/math/) is a topic I really want to write on, but I haven't done enough of it recently (yes, because I've devoted quite some time to this site). 
 
-There's also some **meta** stuff, of course. The changelog, design of the site, etc. 
 
 ## Target Audience
 Me, for the most part. Necessarily so since this site probably won't have any other visitor. Still the fact that I'm working (intensively) on this site, spurred by some inarticulable motivation, means that it must be something worthwhile[^3]. I don't think my writings are entirely absent of insight, so if the content listed above intrigues you, yay have fun.
