@@ -75,7 +75,7 @@ Also, perhaps because I’ve always been intrigued by dreaming and the unconscio
 
 At the beginning of the novel, he was dying among radioactive ruins, one of the survivors of a nuclear holocaust but eventually to be wiped out. He dreams a somewhat better world, and so he wakes up in one. As his ability reaches Haber’s hands and he demands more “effective dreams,” Orr has to reconcile many more simultaneous timelines. I won’t bore you with each; there’s a neat timeline attached below if you’re interested.
 
-![TLOH Timeline](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Lathe_of_Heaven_Timeline.png/1920px-Lathe_of_Heaven_Timeline.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail)
+[![TLOH Timeline](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Lathe_of_Heaven_Timeline.png/1920px-Lathe_of_Heaven_Timeline.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail)](https://en.wikipedia.org/wiki/File:Lathe_of_Heaven_Timeline.png)
 
 In the end it coalesces into one. It’s a kaleidoscopic world where grey is just another race among many (so there’s still a chance with Heather!), the turtle-like aliens are here to stay, and the population density remains roughly the same but is managed better. I don’t think, though, that Orr really grapples with the objectivity of reality if he can dream up a new one every night, rather he finds a lot more problems with it on a moral basis. It remains interesting to think about.
 

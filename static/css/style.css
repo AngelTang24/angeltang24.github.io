@@ -52,11 +52,22 @@ a:hover {
 
 p a[href^="#"]:not(.footnote-ref):not(.footnote-backref)::after, p a[href^="/"]::after  {
   content: "⤴\FE0E";
+  font-size: 0.8em;
+  vertical-align: super;
   margin-left: 0.1em;
 }
 
 p a[href^="http"]::after {
   content: "↗\FE0E";
+  font-size: 0.8em;
+  vertical-align: super;
+  margin-left: 0.1em;
+}
+
+a[href^="http"]:has(img)::after {
+  content: " ↗\FE0E\00A0 Obtained from";
+  font-size: 0.7em;
+  vertical-align: baseline;
   margin-left: 0.1em;
 }
 
@@ -318,8 +329,7 @@ code { background: var(--light-gray); }
 pre code { background: none; }
 
 /* misc elements */
-img, iframe, video { max-width: 100%; box-sizing: border-box; }
-img { padding: 1em 1em; width: auto; }
+img, iframe, video { max-width: 100%; height: auto; }
 main { hyphens: auto; }
 blockquote {
   background: var(--light-gray);

@@ -30,8 +30,10 @@
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
       document.getElementById(tab.dataset.target).hidden = false;
+      sessionStorage.setItem('aboutTab', tab.dataset.target);
     });
   });
+  document.querySelector(`[data-target="${sessionStorage.getItem('aboutTab')}"]`)?.click();
 </script>
 
 {{ partial "footer.html" . }}
